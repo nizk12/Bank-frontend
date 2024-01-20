@@ -16,7 +16,7 @@ import useUserStore from '../store'
 const registerData = z.object({
   name: z.string().min(3, { message: "Username is required" }).max(120),
   email: z.string().email(),
-  password: z.string().min(3, { message: "Password is required" }),
+  password: z.string().min(5, { message: "Password must be atleast 5 Characters long" }),
   accountType: z.string().min(3, { message: "Please select an account type" }),
   gender: z.string().min(3, { message: "Please select a gender" }),
   title: z.string().min(2, { message: "Title is required" }),
